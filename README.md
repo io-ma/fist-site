@@ -1,3 +1,3 @@
 # Fist website
 
-A simple static website built in HTML and Sass
+A simple static land page built in HTML and Sass for [FIST] (https://github.com/f-prime/fist)
