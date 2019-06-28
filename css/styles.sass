@@ -1,3 +1,12 @@
+// Colors
+$dark-grey: #272822
+$grey: #7a7a7a
+$black: #000
+$dirty-white: #F5F2F0
+$dark-lime: #51640e
+$lime: #b3dd1f
+$light-lime: #e7f5b7
+
 // Google fonts
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade|IBM+Plex+Sans|Nixie+One')
 
@@ -8,38 +17,97 @@ $nixie: 'Nixie One', cursive
 
 root
   font-size: 16px
+  line-height: 1.5
+
+// Mixins
+
+@mixin common-links
+  a
+    transition-property: all
+    transition: cubic-bezier(0.4, 0, 0.2, 1)
+    transition-timing-function: ease-in-out
+    transition-duration: 0.5s
+    color: $black
+    margin: 0px 10px
+    padding: 5px
+    &:active
+      color: $black
+    &:visited
+      color: $black
+    &:hover
+      background: $light-lime
+      color: $dark-lime
+
+@mixin selection 
+    &:-moz-selection
+        background:#e7e7e7
+    &:selection 
+        background:#e7e7e7
 
 // Typography
 body 
   font-family: $ibm
   font-size: 1.7rem
-  line-height: 1.5
-h1
+
+h1.main-title
   font-family: $bungee
   font-size: 6rem
+  color: $lime
+  font-weight: 400
+  word-wrap: break-word
 
 h2
-  font-family: $nixie
+  font-family: $ibm
   font-size: 3rem
   padding-left: 1.5rem
-h3
+
+h2.main-subtitle
+  padding-top: 0px
   font-family: $nixie
+  color: $lime
+
+h3
+  font-family: $ibm
   font-size: 2rem
   padding-left: 1.5rem
+
 p
   padding: 1.5rem
 
 // Layout
+
+body
+  @include common-links
+  @include selection
+  margin: 0
 
 header
   display: flex
   flex-direction: column
   align-items: center
   height: auto
+  background-color: $dark-grey
+
 main
   display: flex
   flex-direction: column
   align-items: center
   width: 100%
+
 article
   width: 80%
+
+section
+  padding: 20px 0px 
+  border-bottom: 1px dotted silver
+
+nav
+  margin-top: 20px
+
+footer
+  width: 100%
+  background: $dark-grey
+  box-sizing: border-box
+  height: 15vh
+  text-align: center
+  color: $light-lime
