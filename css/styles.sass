@@ -64,19 +64,18 @@ h1.main-title
 
 h2
   @include heading
-  font-family: $ibm
+  font-family: $nixie
   font-size: 3rem
   margin: 8px 0 0.75rem 0
 
 h2.main-subtitle
   padding-top: 0px
-  font-family: $nixie
   color: $lime
   margin: 0 2rem 2rem 2rem
 
 h3
   @include heading
-  font-family: $ibm
+  font-family: $nixie
   font-size: 2rem
   margin: 8px 0 0.75rem 0
 
@@ -111,14 +110,14 @@ article
   align-items: center
   justify-content: center
   width: 80%
-  margin-top: 2rem
+  margin: 2rem 0
 
 section
   display: flex
   flex-direction: column
   border-bottom: 1px dotted silver
   width: 90%
-  padding: 2rem 0 2rem 0
+  padding: 2rem 0
 
 nav
   margin-top: 2rem
@@ -132,3 +131,16 @@ footer
   height: 15vh
   text-align: center
   color: $light-lime
+  margin-top: 2rem
+  p
+    padding-top: 1.5rem
+
+@media (min-width: 48em) and (max-width: 64em)
+  section
+    width: 85%
+    max-width: 85%
+
+@media screen and (min-width: 64em)
+  section
+    width: 50%
+    max-width: 50%
