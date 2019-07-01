@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Bungee+Shade|IBM+Plex+Sans|Nixie+One");
+* {
+  margin: 0;
+}
+
 root {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 h1.main-title {
@@ -15,41 +19,44 @@ h1.main-title {
   color: #b3dd1f;
   font-weight: 400;
   word-wrap: break-word;
+  margin: 0.5rem 0 3.5rem 0;
 }
 
 h2 {
+  margin-left: 1.5rem;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 3rem;
-  padding-left: 1.5rem;
+  margin: 8px 0 0.75rem 0;
 }
 
 h2.main-subtitle {
   padding-top: 0px;
   font-family: "Nixie One", cursive;
   color: #b3dd1f;
+  margin: 0 2rem 2rem 2rem;
 }
 
 h3 {
+  margin-left: 1.5rem;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 2rem;
-  padding-left: 1.5rem;
+  margin: 8px 0 0.75rem 0;
 }
 
 p {
-  padding: 1.5rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  text-indent: 0;
 }
 
-body {
-  margin: 0;
-}
 body a {
   transition-property: all;
   transition: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: ease-in-out;
   transition-duration: 0.5s;
   color: #000;
-  margin: 0px 10px;
-  padding: 5px;
+  margin: 0 10px;
+  padding: 10px;
 }
 body a:active {
   color: #000;
@@ -84,16 +91,27 @@ main {
 }
 
 article {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 80%;
+  margin-top: 2rem;
 }
 
 section {
-  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px dotted silver;
+  width: 90%;
+  padding: 2rem 0 2rem 0;
 }
 
 nav {
-  margin-top: 20px;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 footer {

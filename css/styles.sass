@@ -15,8 +15,11 @@ $bungee: 'Bungee Shade', cursive
 $ibm: 'IBM Plex Sans', sans-serif
 $nixie: 'Nixie One', cursive
 
+* 
+  margin: 0
+
 root
-  font-size: 16px
+  font-size: 14px
   line-height: 1.5
 
 // Mixins
@@ -28,8 +31,8 @@ root
     transition-timing-function: ease-in-out
     transition-duration: 0.5s
     color: $black
-    margin: 0px 10px
-    padding: 5px
+    margin: 0 10px
+    padding: 10px
     &:active
       color: $black
     &:visited
@@ -43,11 +46,13 @@ root
         background:#e7e7e7
     &:selection 
         background:#e7e7e7
+@mixin heading
+  margin-left: 1.5rem
 
 // Typography
 body 
   font-family: $ibm
-  font-size: 1.7rem
+  font-size: 1.5rem
 
 h1.main-title
   font-family: $bungee
@@ -55,31 +60,36 @@ h1.main-title
   color: $lime
   font-weight: 400
   word-wrap: break-word
+  margin: 0.5rem 0 3.5rem 0
 
 h2
+  @include heading
   font-family: $ibm
   font-size: 3rem
-  padding-left: 1.5rem
+  margin: 8px 0 0.75rem 0
 
 h2.main-subtitle
   padding-top: 0px
   font-family: $nixie
   color: $lime
+  margin: 0 2rem 2rem 2rem
 
 h3
+  @include heading
   font-family: $ibm
   font-size: 2rem
-  padding-left: 1.5rem
+  margin: 8px 0 0.75rem 0
 
 p
-  padding: 1.5rem
+  margin-bottom: 1rem
+  word-wrap: break-word
+  text-indent: 0
 
 // Layout
 
 body
   @include common-links
   @include selection
-  margin: 0
 
 header
   display: flex
@@ -95,14 +105,25 @@ main
   width: 100%
 
 article
+  display: flex
+  flex: auto
+  flex-direction: column
+  align-items: center
+  justify-content: center
   width: 80%
+  margin-top: 2rem
 
 section
-  padding: 20px 0px 
+  display: flex
+  flex-direction: column
   border-bottom: 1px dotted silver
+  width: 90%
+  padding: 2rem 0 2rem 0
 
 nav
-  margin-top: 20px
+  margin-top: 2rem
+  text-transform: uppercase
+  text-align: center
 
 footer
   width: 100%
