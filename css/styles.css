@@ -128,6 +128,29 @@ footer p {
   padding-top: 1.5rem;
 }
 
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 1.5rem;
+  align-self: flex-end;
+}
+.social__link a {
+  color: #b3dd1f;
+  font-size: 2rem;
+  padding: 0;
+}
+.social__link a:active {
+  color: #b3dd1f;
+}
+.social__link a:visited {
+  color: #b3dd1f;
+}
+.social__link a:hover {
+  color: #51640e;
+  background: none;
+}
+
 @media (min-width: 48em) and (max-width: 64em) {
   section {
     width: 85%;

@@ -137,6 +137,26 @@ footer
   p
     padding-top: 1.5rem
 
+.social
+  display: flex
+  flex-wrap: wrap
+  list-style-type: none
+  padding: 1.5rem
+  align-self: flex-end
+  &__link
+    a
+      color: $lime
+      font-size: 2rem
+      padding: 0
+      &:active
+        color: $lime
+      &:visited
+        color: $lime
+      &:hover
+        color: $dark-lime
+        background: none
+  
+
 @media (min-width: 48em) and (max-width: 64em)
   section
     width: 85%
