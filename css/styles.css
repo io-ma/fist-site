@@ -69,10 +69,10 @@ body a:hover {
   background: #e7f5b7;
   color: #51640e;
 }
-body:-moz-selection {
+body ::-moz-selection {
   background: #e7e7e7;
 }
-body:selection {
+body ::selection {
   background: #e7e7e7;
 }
 
